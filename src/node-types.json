@@ -1,10 +1,5 @@
 [
   {
-    "type": "end_pre",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "heading1",
     "named": true,
     "fields": {},
@@ -95,9 +90,13 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "indicator",
+          "named": true
+        },
         {
           "type": "text",
           "named": true
@@ -182,9 +181,13 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "indicator",
+          "named": true
+        },
         {
           "type": "text",
           "named": true
@@ -213,20 +216,20 @@
     "named": false
   },
   {
-    "type": "* ",
-    "named": false
-  },
-  {
     "type": "=>",
-    "named": false
-  },
-  {
-    "type": ">",
     "named": false
   },
   {
     "type": "```",
     "named": false
+  },
+  {
+    "type": "end_pre",
+    "named": true
+  },
+  {
+    "type": "indicator",
+    "named": true
   },
   {
     "type": "uri",
