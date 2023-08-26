@@ -12,9 +12,12 @@
 (start_pre
   alt: (text) @label)
 
-(heading1) @markup.heading.1
-(heading2) @markup.heading.2
-(heading3) @markup.heading.3
+(heading1
+  (text) @markup.heading.1) @markup.heading.marker
+(heading2
+  (text) @markup.heading.2) @markup.heading.marker
+(heading3
+  (text) @markup.heading.3) @markup.heading.marker
 
 (ulist) @markup.list.unnumbered
 (quote) @markup.quote
