@@ -49,9 +49,9 @@ module.exports = grammar({
     heading3: $ => seq('###', optional($._space), $.text),
 
     /* 5.5.2 Unordered list items */
-    ulist: $ => seq('*', $._space, $.text),
+    ulist: $ => seq(alias('* ', $.indicator), $.text),
 
     /* 5.5.3 Quote lines */
-    quote: $ => seq('>', optional($._space), $.text),
+    quote: $ => seq(alias('>', $.indicator), $.text),
   }
 });

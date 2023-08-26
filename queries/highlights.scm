@@ -19,5 +19,8 @@
 (heading3
   (text) @markup.heading.3) @markup.heading.marker
 
-(ulist) @markup.list.unnumbered
-(quote) @markup.quote
+(ulist
+  (indicator) @markup.list.unnumbered) 
+(quote
+  (indicator) @markup.quote
+  (text) @markup.italic)
