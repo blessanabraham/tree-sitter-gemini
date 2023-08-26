@@ -1,8 +1,9 @@
 module.exports = grammar({
   name: 'gemini',
+  // control whitespace explicitly
+  extras: $ => [],
 
   rules: {
-    // control whitespace explicitly
     source_file: $ => repeat(seq(
       choice(
         $.text,

@@ -90,11 +90,8 @@
     "text": {
       "type": "REPEAT1",
       "content": {
-        "type": "IMMEDIATE_TOKEN",
-        "content": {
-          "type": "SYMBOL",
-          "name": "_word"
-        }
+        "type": "SYMBOL",
+        "name": "_word"
       }
     },
     "link": {
@@ -343,12 +340,7 @@
       ]
     }
   },
-  "extras": [
-    {
-      "type": "PATTERN",
-      "value": "\\s"
-    }
-  ],
+  "extras": [],
   "conflicts": [],
   "precedences": [],
   "externals": [],
