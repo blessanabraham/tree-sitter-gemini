@@ -1,0 +1,30 @@
+{
+  "name": "tree-sitter-gemini",
+  "version": "0.1.0",
+  "description": "tree-sitter grammar for gemini files",
+  "main": "bindings/node",
+  "keywords": [
+    "parser",
+    "gemini",
+    "gemtext",
+    "tree-sitter"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://git.sr.ht/~sfr/tree-sitter-gemini.git"
+  },
+  "author": "Sol Fisher Romanoff <sol@solfisher.com>",
+  "license": "MIT",
+  "homepage": "https://git.sr.ht/~sfr/tree-sitter-gemini#readme",
+  "dependencies": {
+    "nan": "^2.17.0"
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.gmi",
+      "file-types": [
+        "gmi"
+      ]
+    }
+  ]
+}
