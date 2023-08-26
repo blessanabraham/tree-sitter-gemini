@@ -1,20 +1,20 @@
-(link) @link
+(link) @punctuation.bracket
 (link 
-  label: (text) @link.label)
+  label: (text) @markup.link.label)
 (link
-  uri: (uri) @link.uri)
+  uri: (uri) @markup.link.url)
 
 [
   (start_pre)
   (pre)
   (end_pre)
-] @pre
+] @markup.raw.block
 (start_pre
-  alt: (text) @pre.alt)
+  alt: (text) @label)
 
-(heading1) @heading
-(heading2) @heading
-(heading3) @heading
+(heading1) @markup.heading.1
+(heading2) @markup.heading.2
+(heading3) @markup.heading.3
 
-(ulist) @ulist
-(quote) @quote
+(ulist) @markup.list.unnumbered
+(quote) @markup.quote
