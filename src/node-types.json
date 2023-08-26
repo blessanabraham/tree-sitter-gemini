@@ -62,6 +62,16 @@
             "named": true
           }
         ]
+      },
+      "uri": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "uri",
+            "named": true
+          }
+        ]
       }
     }
   },
@@ -152,7 +162,7 @@
     "fields": {
       "alt": {
         "multiple": false,
-        "required": false,
+        "required": true,
         "types": [
           {
             "type": "text",
@@ -203,7 +213,7 @@
     "named": false
   },
   {
-    "type": "*",
+    "type": "* ",
     "named": false
   },
   {
@@ -217,5 +227,9 @@
   {
     "type": "```",
     "named": false
+  },
+  {
+    "type": "uri",
+    "named": true
   }
 ]

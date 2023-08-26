@@ -6,6 +6,7 @@ module.exports = grammar({
   rules: {
     source_file: $ => repeat(seq(
       choice(
+        $._space,
         $.text,
         $.link,
         seq(
@@ -25,14 +26,15 @@ module.exports = grammar({
     /* 5.4 Core line types */
 
     /* 5.4.1 Text lines */
+    _space: $ => repeat1(' '),
     _word: $ => /\S+/,
-    text: $ => repeat1($._word),
+    text: $ => repeat1(seq($._word, optional($._space))),
 
     /* 5.4.2 Link lines */
-    link: $ => seq('=>', optional(repeat1(' ')), $._word, optional(seq(repeat1(' '), field('label', $.text)))),
+    link: $ => seq('=>', optional($._space), field('uri', alias($._word, $.uri)), optional(field('label', $.text))),
 
     /* 5.4.3 Preformatting toggle lines */
-    start_pre: $ => seq('```', optional(seq(optional(repeat1(' ')), field('alt', $.text))), '\n'),
+    start_pre: $ => seq('```', optional(seq(optional($._space), field('alt', $.text))), '\n'),
     end_pre: $ => '```',
 
     /* 5.4.4 Preformatted text lines */
@@ -42,14 +44,14 @@ module.exports = grammar({
     /* 5.5 Advanced line types */
     
     /* 5.5.1 Heading lines */
-    heading1: $ => seq('#', optional(repeat1(' ')), $.text),
-    heading2: $ => seq('##', optional(repeat1(' ')), $.text),
-    heading3: $ => seq('###', optional(repeat1(' ')), $.text),
+    heading1: $ => seq('#', optional($._space), $.text),
+    heading2: $ => seq('##', optional($._space), $.text),
+    heading3: $ => seq('###', optional($._space), $.text),
 
     /* 5.5.2 Unordered list items */
-    ulist: $ => seq('*', repeat1(' '), $.text),
+    ulist: $ => seq('*', $._space, $.text),
 
     /* 5.5.3 Quote lines */
-    quote: $ => seq('>', optional(repeat1(' ')), $.text),
+    quote: $ => seq('>', optional($._space), $.text),
   }
 });

@@ -1,6 +1,8 @@
 (link) @link
 (link 
-  label: (text) @link.title)
+  label: (text) @link.label)
+(link
+  uri: (uri) @link.uri)
 
 [
   (start_pre)
